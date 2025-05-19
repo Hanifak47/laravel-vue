@@ -7,10 +7,12 @@
 
     <title>Laravel</title>
 
+    @routes
     @vite('resources/js/app.js')
     @inertiaHead
 </head>
-    @inertia
+@inertia
+
 <body>
 </body>
 

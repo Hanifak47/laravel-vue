@@ -37,7 +37,13 @@ class HandleInertiaRequests extends Middleware
     {
         return [
             ...parent::share($request),
-            //
+            'Flash' => [
+                'success' => $request->session()->get(key: 'success')
+            ],
+            // 'Errors' => function () use ($request) {
+            //     return $this->resolveValidationErrors($request);
+            // }
+            'errors' => fn () => $this->resolveValidationErrors($request),
         ];
     }
 }
