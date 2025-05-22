@@ -8,12 +8,15 @@
     <title>Laravel</title>
 
     @routes
+    @vite('resources/css/app.css')
     @vite('resources/js/app.js')
     @inertiaHead
 </head>
-@inertia
 
-<body>
+{{-- keadaan normal theme dan dark theme --}}
+
+<body class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-300">
+    @inertia
 </body>
 
 </html>
